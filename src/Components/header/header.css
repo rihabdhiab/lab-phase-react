@@ -1,0 +1,14 @@
+.header{
+    background-color: rgb(124, 120, 120);
+    /*height: 100px;*/
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.header input{
+    height: 40px;
+    width: 300px;
+}
+.header button{
+    height: 40px;
+}
