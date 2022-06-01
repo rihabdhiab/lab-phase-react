@@ -1,4 +1,4 @@
-import { ADD_BOOK,IS_CURRENTLY_READ,WANT_TO_READ,IS_READ, ADD_COMMENT,DELETE_COMMENT} from '../Constants/actions-types';
+import { ADD_BOOK,IS_CURRENTLY_READ,WANT_TO_READ,IS_READ} from '../Constants/actions-types';
 
 export const add_book= (payload) => {
     return {
@@ -24,16 +24,6 @@ export const isRead = (payload) => {
         payload
     }
 }
-export const addComment = (payload) => {
-    return {
-        type: ADD_COMMENT,
-        payload
-    }
-}
-export const deleteComment = (payload) => {
-    return {
-        type: DELETE_COMMENT,
-        payload
-    }
-}
+
+
 

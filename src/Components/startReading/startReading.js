@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import AddComments from '../addComment/AddComments';
 import ReadingProgress from '../ReadingProgress/readingProgress';
+import './startReading.css';
 
 
 export default function Start() {
@@ -12,20 +12,20 @@ export default function Start() {
   const [hours, setHours] = useState(0);
   const [isActive, setIsActive] = useState(false);
  
- 
   let bookList = useSelector(state => state.books);
-  
-  
   let { id } = useParams();
+  
   const toggle = () => {
     setIsActive(!isActive)
   }
+  
   const reset = () => {
     setSeconds(0);
     setMinutes(0);
     setHours(0);
     setIsActive(false)
   }
+  
   useEffect(() => {
     let timer = null;
     if (isActive) {
@@ -50,24 +50,19 @@ export default function Start() {
 
 
   return (
-    <div>
-      <h4>Start reading</h4>
-      {bookList.filter(book => book.id == id).map(book =><div key={book.id}><ReadingProgress key={book.id} book={book} />
-      <h2>{hours<10?"0"+hours:hours}:{minutes<10?"0"+minutes:minutes}:{seconds<10?"0"+seconds:seconds}</h2>
-        <button onClick={toggle}>{isActive ? 'Take a break' : 'start'}</button>
-        <button onClick={reset}>reset</button>
-        <AddComments  book={book}/> 
+    <div className='startReading'>
+      <h2 className='timer'> <span className='hours'>{hours < 10 ? "0" + hours : hours}</span>:
+        <span className='minutes'>{minutes < 10 ? "0" + minutes : minutes}</span>:
+        <span className='seconds'>{seconds < 10 ? "0" + seconds : seconds}</span></h2>
+      <div>
+      <button className='start-button' style={{backgroundColor: isActive ? 'green':' rgb(133, 133, 233)'}} onClick={toggle}>{isActive ? 'Take a break' : 'Start'}</button>
+      <button className='reset-button' onClick={reset}>Reset</button>
       </div>
-      )}
-      
-      
-      
-        
+      {bookList.filter(book => book.id == id).map(book => <div key={book.id}><ReadingProgress key={book.id} book={book} />
      
         
-        
-       
-      
+      </div>
+      )}
 
     </div>
   )

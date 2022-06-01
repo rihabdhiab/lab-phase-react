@@ -1,0 +1,47 @@
+.startReading{
+    padding:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.timer{
+    color: rgb(127, 158, 224);
+}
+.hours{
+background-color: rgb(176, 198, 226);
+border-radius: 10px;
+padding: 5px;
+color: white;
+
+}
+.minutes{
+    background-color: rgb(187, 200, 218);
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    
+}
+.seconds{
+    background-color: rgb(202, 211, 221);
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+}
+.start-button{
+    border:none;
+    border-radius: 10px;
+    height:45px; 
+    padding: 10px;
+    color: aliceblue;
+    margin: 10px;
+}
+.reset-button{
+    border:none;
+    border-radius: 10px;
+    height:45px; 
+    padding: 10px;
+    background-color: rgb(224, 80, 80);
+    color: aliceblue;
+}

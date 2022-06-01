@@ -1,0 +1,28 @@
+.modal-box {
+    background: linear-gradient( #9c9da0, #8da7c0);
+    width: 560px;
+    height: 490px;
+    
+}
+.modal-box .modal-header{
+    color: white;
+}
+
+.modal-box .add-input{
+    height: 60px;
+    width: 220px;
+    margin: 15px;
+    padding: 15px;
+    outline: none;
+    border:2px solid #6a6c6d;
+    border-radius: 15px;
+}
+.modal-box .button1{
+    background-color: #636161;
+    border: none;
+}
+
+.modal-box .button2{
+    background-color:#3874cf ;
+    border: none;
+}

@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import './addComment.css';
 
 
-export default function AddComments({ book }) {
-
+export default function AddComments() {
+    let books = useSelector(state => state.books)
+    let book = books.map(book => book.Comments)
+    const [addcomment, setAddcomment] = useState(book);
     const [comment, setComment] = useState("");
-    const [addcomment, setAddcomment] = useState(book.Comments);
+    
 
     const changeComment = (e) => {
         setComment(e.target.value)
@@ -14,25 +18,20 @@ export default function AddComments({ book }) {
         setComment('')    
     }
     
-    
   return (
-      <div>
+      <div className='comments'>
          
-          <h5>AddComments</h5>
+        <h6>Share your opinion with your friends about this book : </h6>
           
-        {addcomment.map(com=>com.content)}
-        
-        
-        
-          <div>
-              <input value={comment} type='text' onChange={changeComment} placeholder='share your opinion...' />  
-              <button onClick={AddComment}>add</button>
-              
-             
+          {addcomment.map(comment => <div>
+              <h5>{comment.content}</h5> 
+          </div>)}
+          
+          <div className='add-comment-bar' >
+              <input value={comment} type='text' onChange={changeComment} placeholder='share your opinion here...' />  
+              <button onClick={AddComment}>Add</button>
           </div>
-          
-          
-          
+
       </div>
       
   )

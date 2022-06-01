@@ -1,0 +1,37 @@
+.readingProgress{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    
+}
+.book-title{
+    color: rgb(99, 99, 245);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.pages-read-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    width:400px;
+    height: 40px;
+}
+.pages-read-bar input{
+    width: 70px;
+    height: 35px;
+    outline: none;
+    border: 1px solid rgb(221, 78, 78);
+    padding: 0px 20px;
+}
+.pages-read-bar button{
+    height: 37px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: aliceblue;
+    background-color: rgb(221, 78, 78);
+}

@@ -1,4 +1,78 @@
 .book-card{
-    border: 3px solid black;
+    border: 2px solid rgb(14, 14, 15);
+    background-color:#cdd7db;
     width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom:50px;
+    margin-right:50px;
+    box-shadow: 7px 5px 5px rgb(12, 10, 10);
+    width:350px;
+    position: relative;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 10px;
 }
+.book-card:hover{
+    transform:  translateY(20px);
+    border: 4px rgb(75, 8, 199) solid;
+}
+.title{
+    background-color: #a0b5be;
+    height:90px;
+    text-align: center;
+    padding: 1rem;
+    color: black;
+    text-decoration: underline #a0b5be;
+    color: #faf8f8;
+}
+.book-card .filter-buttons{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+   
+   
+}
+.filter-buttons button{
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+    
+}
+.book-card .poster{
+    width:100%;
+    height: 400px; 
+    margin-bottom: 8px;
+    border: black 2px solid ;
+}
+  .button {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .book-card:hover .poster {
+    opacity: 0.3;
+  }
+  
+  .book-card:hover .button {
+    opacity: 1;
+  }
+  
+  .reading-button{
+    
+    background: #4f66fa;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+

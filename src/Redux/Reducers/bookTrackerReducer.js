@@ -107,7 +107,7 @@ const initialState = {
         read: false,
         Comments: []
         }],
-        comments:[],
+      
     
 }
 
@@ -136,11 +136,7 @@ const bookTrackerReducer = (state = initialState, action) => {
             }
         
         
-            /*case DELETE_COMMENT:
-                return {
-                    ...state,
-                   Comments:state.Comments.filter(comment=>comment.id!=payload)
-            }*/
+        
             
 
         default:
