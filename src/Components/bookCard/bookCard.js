@@ -31,7 +31,7 @@ export default function BookCard({ book }) {
       />
       <div className="button">
         <Link to={`/start/${book.id}`}>
-          <button className="reading-button">start reading </button>
+          <button className="reading-button">Start reading </button>
         </Link>
       </div>
 
@@ -42,7 +42,7 @@ export default function BookCard({ book }) {
           }}
           onClick={handleClick1}
         >
-          currently read
+          Currently read
         </button>
         <button
           style={{
@@ -50,13 +50,13 @@ export default function BookCard({ book }) {
           }}
           onClick={handleClick2}
         >
-          want to read
+          Want to read
         </button>
         <button
           style={{ backgroundColor: book.read ? "rgb(6, 100, 48)" : "#4f66fa" }}
           onClick={handleClick3}
         >
-          read
+          Read
         </button>
       </div>
     </div>
