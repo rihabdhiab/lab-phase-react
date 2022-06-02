@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import BookCard from "../bookCard/bookCard";
 import './bookList.css';
 import AddBook from "../addBook/addBook";
-
-
+import SlideShow from "../SlideShow/SlideShow";
 
 
 export default function BookList() {
@@ -20,13 +19,15 @@ export default function BookList() {
              <input type='text' value={search} placeholder='search book...' onChange={(e) => setSearch(e.target.value)} /> 
           <AddBook />
         </div>
-        </div>
+      </div>
+      
          <div className="buttons">              
               <button onClick={()=>setList('want to read')}>Want To Read</button>
               <button onClick={()=>setList('currently read')}>Currently Reading</button>
               <button onClick={()=>setList('read')}>Read</button>
               <button onClick={() => setList('all books')}>All Books</button>
-         </div>
+      </div>
+      <SlideShow/>
       
       
           <div className="list-of-books">
